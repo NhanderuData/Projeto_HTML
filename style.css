@@ -1,0 +1,342 @@
+/* ============================================
+   DESAFIO 1: O Alicerce (Variáveis e Reset)
+   ============================================ */
+
+:root {
+    /* Cores principais - Single Source of Truth */
+    --cor-fundo: #f8f9fa;
+    --cor-primaria: #2563eb;
+    --cor-primaria-hover: #1d4ed8;
+    --cor-texto: #1f2937;
+    --cor-texto-claro: #6b7280;
+    --cor-branco: #ffffff;
+    --cor-borda: #e5e7eb;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    
+    /* Tipografia */
+    --fonte-padrao: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --fonte-titulo: 'Poppins', sans-serif;
+    
+    /* Espaçamento */
+    --espacamento-xs: 8px;
+    --espacamento-sm: 12px;
+    --espacamento-md: 16px;
+    --espacamento-lg: 20px;
+    --espacamento-xl: 30px;
+    
+    /* Raio de borda */
+    --raio-pequeno: 4px;
+    --raio-medio: 8px;
+    --raio-grande: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 8px var(--cor-sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--espacamento-lg) var(--espacamento-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espacamento-lg);
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* Flexbox no Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--espacamento-lg);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: var(--espacamento-sm) var(--espacamento-md);
+    border-radius: var(--raio-pequeno);
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* ============================================
+   DESAFIO 3: Área de Conteúdo e Cards
+   ============================================ */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--espacamento-xl) var(--espacamento-md);
+}
+
+.card {
+    background-color: var(--cor-branco);
+    padding: var(--espacamento-xl);
+    border-radius: var(--raio-medio);
+    margin-bottom: var(--espacamento-xl);
+    box-shadow: 0 4px 6px var(--cor-sombra);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-lg);
+    padding-bottom: var(--espacamento-md);
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+.card h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-top: var(--espacamento-lg);
+    margin-bottom: var(--espacamento-md);
+}
+
+.card p {
+    color: var(--cor-texto-claro);
+    margin-bottom: var(--espacamento-md);
+}
+
+/* ============================================
+   DESAFIO 4: Tabelas e Formulários
+   ============================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--espacamento-md);
+}
+
+th, td {
+    text-align: left;
+    padding: var(--espacamento-md);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+    background-color: rgba(37, 99, 235, 0.05);
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+tr:hover {
+    background-color: rgba(37, 99, 235, 0.02);
+}
+
+/* Formulários */
+form {
+    margin-top: var(--espacamento-lg);
+}
+
+.form-group {
+    margin-bottom: var(--espacamento-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: var(--espacamento-sm);
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: var(--espacamento-md);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    font-family: var(--fonte-padrao);
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--cor-branco);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botão de Envio */
+.btn-submit {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: var(--espacamento-md) var(--espacamento-xl);
+    border: none;
+    border-radius: var(--raio-pequeno);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Estilos Adicionais
+   ============================================ */
+
+ul {
+    margin-left: var(--espacamento-lg);
+    color: var(--cor-texto-claro);
+}
+
+li {
+    margin-bottom: var(--espacamento-sm);
+}
+
+.educacao-item {
+    margin-bottom: var(--espacamento-xl);
+    padding-bottom: var(--espacamento-lg);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.educacao-item:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background-color: var(--cor-texto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: var(--espacamento-xl) var(--espacamento-md);
+    margin-top: var(--espacamento-xl);
+    font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: var(--espacamento-xl) var(--espacamento-xl);
+    }
+
+    .card {
+        padding: var(--espacamento-xl);
+    }
+
+    .duas-colunas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espacamento-xl);
+    }
+
+    .habilidades-grupo {
+        padding: var(--espacamento-lg);
+        background-color: rgba(37, 99, 235, 0.03);
+        border-radius: var(--raio-medio);
+        border-left: 4px solid var(--cor-primaria);
+    }
+
+    .habilidades-grupo h3 {
+        margin-top: 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: var(--espacamento-md);
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-container {
+        padding: var(--espacamento-xl) var(--espacamento-xl);
+    }
+
+    main {
+        padding: var(--espacamento-xl) auto;
+    }
+
+    .card {
+        padding: var(--espacamento-xl);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - João Silva</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>João Silva</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="card">
+            <h2>Sobre Mim</h2>
+            <p>Desenvolvedor Full Stack apaixonado por criar soluções web modernas e escaláveis. Com mais de 5 anos de experiência em desenvolvimento, tenho expertise em tecnologias front-end e back-end, sempre buscando aprender e aplicar as melhores práticas de engenharia de software.</p>
+            <p><strong>Email:</strong> joao@example.com | <strong>Telefone:</strong> (11) 99999-9999</p>
+        </section>
+
+        <!-- Seção Experiência -->
+        <section id="experiencia" class="card">
+            <h2>Experiência Profissional</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cargo</th>
+                        <th>Empresa</th>
+                        <th>Período</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senior Developer</td>
+                        <td>Tech Solutions</td>
+                        <td>2022 - Atual</td>
+                        <td>Liderança técnica em projetos de grande escala</td>
+                    </tr>
+                    <tr>
+                        <td>Full Stack Developer</td>
+                        <td>Web Innovations</td>
+                        <td>2020 - 2022</td>
+                        <td>Desenvolvimento de aplicações web responsivas</td>
+                    </tr>
+                    <tr>
+                        <td>Junior Developer</td>
+                        <td>StartUp Digital</td>
+                        <td>2019 - 2020</td>
+                        <td>Desenvolvimento front-end com React</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção Habilidades -->
+        <section id="habilidades" class="card">
+            <h2>Habilidades Técnicas</h2>
+            <div class="duas-colunas">
+                <div class="habilidades-grupo">
+                    <h3>Front-End</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React & Vue.js</li>
+                        <li>Tailwind CSS</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="habilidades-grupo">
+                    <h3>Back-End</h3>
+                    <ul>
+                        <li>Node.js & Express</li>
+                        <li>Python & Django</li>
+                        <li>PostgreSQL & MongoDB</li>
+                        <li>REST APIs</li>
+                        <li>Docker & DevOps</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Educação -->
+        <section id="educacao" class="card">
+            <h2>Educação</h2>
+            <div class="educacao-item">
+                <h3>Bacharelado em Ciência da Computação</h3>
+                <p><strong>Universidade Federal</strong> - 2019</p>
+                <p>Formação sólida em algoritmos, estruturas de dados e engenharia de software.</p>
+            </div>
+            <div class="educacao-item">
+                <h3>Certificação Full Stack Web Development</h3>
+                <p><strong>Bootcamp Tech Academy</strong> - 2020</p>
+                <p>Especialização intensiva em desenvolvimento web moderno.</p>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="card">
+            <h2>Entre em Contato</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 João Silva. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
